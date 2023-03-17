@@ -11,21 +11,21 @@
 
 int fibonacci(int); //prototype function
 
-int main(){
+int main(){ //main function: required
 
     int value = 0;  //value to recursively calculate a fibonacci number
     
-    printf("Add a number: ");
-    scanf("%d", &value);
+    printf("Add a number: "); //program requests a number
+    scanf("%d", &value);    //value is saved in "value" variable
 
-    printf("Value after recursion: %d\n", fibonacci(value));
+    printf("Your fibonacci number is: %d\n", fibonacci(value));  //calculates the fibonacci number
 
     return 0;
 }
 
 int fibonacci(int recV){
-    if(recV <= 1)
+    if(recV <= 2)   //when the number to calculate is 1 or less than 1 it should return the same number i.e. fibonacci 1  = 1
         return recV;
     else
-        return recV * fibonacci(recV - 1);
+        return recV * fibonacci(recV - 1); //Otherwise, multiply the current value with a the fibonacci number of (recV-1) 
 }
