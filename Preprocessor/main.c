@@ -5,6 +5,7 @@
 int main(){
 
     int i; //iterator
+    int j;
 
     for(i = 0; i <= MAX; i++)
     {
